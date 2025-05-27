@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace commandos.models
 {
-    public class Entities
+    public abstract class Commando
     {
         private string _name;
         private string _codeName { get; set; }
@@ -17,7 +17,7 @@ namespace commandos.models
         }
         private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Watery"};
         private string _status;
-        public Entities(string name , string codeName)
+        public Commando(string name , string codeName)
         {
             _name = name;
             _codeName = codeName;
