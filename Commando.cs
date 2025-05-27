@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace commandos.models
 {
-    public class Entities
+    public class Commando
     {
         private string _name;
         private string _codeName { get; set; }
@@ -17,7 +17,7 @@ namespace commandos.models
         }
         private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Watery"};
         private string _status;
-        public Entities(string name , string codeName)
+        public Commando(string name , string codeName)
         {
             _name = name;
             _codeName = codeName;
@@ -35,10 +35,10 @@ namespace commandos.models
             Console.WriteLine($"{_name} is {_status}ing");
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             _status = "attack";
-            Console.WriteLine($"{_name} code name {_codeName} is {_status}ing");
+            Console.WriteLine($"Land commando named {_name} code name {_codeName} is {_status}ing");
         }
         public string SayName(string commanderRank)
         {
