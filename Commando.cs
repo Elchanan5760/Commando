@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using commandos.models;
 
 namespace commandos.models
 {
@@ -35,10 +36,10 @@ namespace commandos.models
             Console.WriteLine($"{_name} is {_status}ing");
         }
 
-        public virtual void Attack()
+        public virtual void Attack(Enemy enemy)
         {
             _status = "attack";
-            Console.WriteLine($"Land commando named {_name} code name {_codeName} is {_status}ing");
+            Console.WriteLine($"Land commando named {_name} code name {_codeName} is {_status}ing {enemy.GetName()}");
         }
         public string SayName(string commanderRank)
         {

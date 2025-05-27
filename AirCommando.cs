@@ -23,10 +23,10 @@ namespace commandos.models
             _name = name;
             _codeName = codeName;
         }
-        public override void Attack()
+        public override void Attack(Enemy enemy)
         {
             _status = "attack";
-            Console.WriteLine($"Air commando named {_name} code name {_codeName} is {_status}ing");
+            Console.WriteLine($"Air commando named {_name} code name {_codeName} is {_status}ing {enemy.GetName()}");
         }
         public string Skydiving()
         {
