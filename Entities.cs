@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace commandos
 {
-    internal class Entities
+    public class Entities
     {
+       private string _name;
+       private string _password;
+       private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Watery"};
+       private string _status;
     }
 }
