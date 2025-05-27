@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace commandos
+namespace commandos.models
 {
     public class Entities
     {
         private string _name;
         private string _password;
-        private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Watery"};
+        private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Canteen"};
         private string _status;
         public Entities(string name , string password)
         {
