@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace commandos.models
 {
-    public abstract class Commando
+    public class Commando
     {
         private string _name;
         private string _codeName { get; set; }
