@@ -23,6 +23,11 @@ namespace commandos.models
             _name = name;
             _codeName = codeName;
         }
+        public override void Attack()
+        {
+            _status = "attack";
+            Console.WriteLine($"Sea commando named {_name} code name {_codeName} is {_status}ing");
+        }
         public string Swimming()
         {
             _status = "swim";

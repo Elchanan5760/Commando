@@ -9,6 +9,7 @@ namespace commandos.models
     public class AirCommando : Commando
     {
         private string _name;
+        
         private string _codeName { get; set; }
         public string CodeName
         {
@@ -21,6 +22,11 @@ namespace commandos.models
         {
             _name = name;
             _codeName = codeName;
+        }
+        public override void Attack()
+        {
+            _status = "attack";
+            Console.WriteLine($"Air commando named {_name} code name {_codeName} is {_status}ing");
         }
         public string Skydiving()
         {
