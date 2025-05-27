@@ -9,7 +9,12 @@ namespace commandos.models
     public class Entities
     {
         private string _name;
-        private string _codeName;
+        private string _codeName { get; set; }
+        public string CodeName
+        {
+            get { return _codeName; }
+            set { _codeName = value; }
+        }
         private string[] _tools = new string[5]{"Hammer","Chisel","Rope","Bag","Watery"};
         private string _status;
         public Entities(string name , string codeName)
@@ -34,6 +39,21 @@ namespace commandos.models
         {
             _status = "attack";
             Console.WriteLine($"{_name} code name {_codeName} is {_status}ing");
+        }
+        public string SayName(string commanderRank)
+        {
+            switch (commanderRank.ToLower())
+            {
+                case "general":
+                    Console.WriteLine($"The name is {_name}");
+                    return _name;
+                case "colonel":
+                    Console.WriteLine($"The code name is {_codeName}");
+                    return _name;
+                default:
+                    Console.WriteLine("This information is unathotized");
+                    return "This information is unathotized";
+            }
         }
     }
 }
